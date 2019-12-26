@@ -1,5 +1,6 @@
-### Install
+##### Utility for generation struct deep copy functions
 
+### Install
 ```bash
 go install github.com/south-rit/copy-generator
 ```
