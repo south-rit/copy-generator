@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/rit-epc/copy-generator/bootstrap"
-	"github.com/rit-epc/copy-generator/parser"
+	"github.com/south-rit/copy-generator/bootstrap"
+	"github.com/south-rit/copy-generator/parser"
 	"os"
 	"path/filepath"
 	"strings"

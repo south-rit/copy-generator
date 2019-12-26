@@ -14,7 +14,7 @@ import (
 	"sort"
 )
 
-const genPackage = "github.com/rit-epc/copy-generator/gen"
+const genPackage = "github.com/south-rit/copy-generator/gen"
 
 type Generator struct {
 	PkgPath, PkgName string
