@@ -245,10 +245,8 @@ func (g *generator) _slice(f structField) {
 		e = e.Elem()
 	}
 
-	needEnd := false
 	if f.Type.Kind() == reflect.Slice {
 		fmt.Printf("if len(%s) > 0 {\n", f.in())
-		needEnd = true
 
 		typ := e.Name()
 		if e.Kind() == reflect.Interface {
@@ -259,6 +257,7 @@ func (g *generator) _slice(f structField) {
 		}
 
 		fmt.Printf("%s = make([]%s%s, len(%s))\n", f.out(), ptr, typ, f.in())
+		fmt.Println("}")
 	}
 
 	lv := g.nextVar()
@@ -266,9 +265,6 @@ func (g *generator) _slice(f structField) {
 	fmt.Printf("for %s := range %s {\n", lv, f.in())
 	g._sliceItem(f, lv)
 	fmt.Println("}")
-	if needEnd {
-		fmt.Println("}")
-	}
 	
 	return
 }
