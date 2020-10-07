@@ -247,7 +247,7 @@ func (g *generator) _slice(f structField) {
 
 	needEnd := false
 	if f.Type.Kind() == reflect.Slice {
-		fmt.Printf("if len(%s) > 0 {\n", f.out())
+		fmt.Printf("if len(%s) > 0 {\n", f.in())
 		needEnd = true
 
 		typ := e.Name()
